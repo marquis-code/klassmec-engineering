@@ -23,11 +23,17 @@ const heroSlides = [
   },
 ]
 
+
+import IconConstruction from '@/components/icons/IconConstruction.vue'
+import IconBlueprint from '@/components/icons/IconBlueprint.vue'
+import IconClients from '@/components/icons/IconClients.vue'
+import IconCheck from '@/components/icons/IconCheck.vue'
+
 const stats = [
-  { value: '30+', label: 'Years of Experience', icon: '🏗️' },
-  { value: '50+', label: 'Major Projects', icon: '📐' },
-  { value: '20+', label: 'Multinational Clients', icon: '🤝' },
-  { value: '100%', label: 'Commitment to Quality', icon: '✅' },
+  { value: '30+', label: 'Years of Experience', icon: IconConstruction },
+  { value: '50+', label: 'Major Projects', icon: IconBlueprint },
+  { value: '20+', label: 'Multinational Clients', icon: IconClients },
+  { value: '100%', label: 'Commitment to Quality', icon: IconCheck },
 ]
 
 let autoplayInterval: ReturnType<typeof setInterval>
@@ -129,7 +135,9 @@ const scrollToAbout = () => {
           :key="stat.label"
           class="stat-card"
         >
-          <div class="text-xl mb-1">{{ stat.icon }}</div>
+          <div class="text-xl mb-1">
+            <component :is="stat.icon" class="inline w-7 h-7 align-middle" />
+          </div>
           <div class="font-display text-2xl font-bold text-gold-400">{{ stat.value }}</div>
           <div class="text-xs text-white/60 mt-1">{{ stat.label }}</div>
         </div>

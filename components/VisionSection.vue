@@ -2,13 +2,20 @@
 const sectionRef = ref<HTMLElement>()
 const isVisible = ref(false)
 
+import IconJustice from '@/components/icons/IconCheck.vue'
+import IconMedal from '@/components/icons/IconSuccess.vue'
+import IconBulb from '@/components/icons/IconBlueprint.vue'
+import IconShield from '@/components/icons/IconConstruction.vue'
+import IconTarget from '@/components/icons/IconBlueprint2.vue'
+import IconTeam from '@/components/icons/IconClients.vue'
+
 const coreValues = [
-  { icon: '⚖️', label: 'Integrity', desc: 'Honest and ethical in every project and partnership.' },
-  { icon: '🏅', label: 'Quality', desc: 'Uncompromising standards in every deliverable.' },
-  { icon: '💡', label: 'Innovation', desc: 'Embracing modern solutions to engineering challenges.' },
-  { icon: '🛡️', label: 'Safety', desc: 'Zero-compromise approach to workplace safety.' },
-  { icon: '🎯', label: 'Customer Focus', desc: 'Client success is our definition of success.' },
-  { icon: '👥', label: 'Teamwork', desc: 'Collective expertise driving outstanding results.' },
+  { icon: IconJustice, label: 'Integrity', desc: 'Honest and ethical in every project and partnership.' },
+  { icon: IconMedal, label: 'Quality', desc: 'Uncompromising standards in every deliverable.' },
+  { icon: IconBulb, label: 'Innovation', desc: 'Embracing modern solutions to engineering challenges.' },
+  { icon: IconShield, label: 'Safety', desc: 'Zero-compromise approach to workplace safety.' },
+  { icon: IconTarget, label: 'Customer Focus', desc: 'Client success is our definition of success.' },
+  { icon: IconTeam, label: 'Teamwork', desc: 'Collective expertise driving outstanding results.' },
 ]
 
 onMounted(() => {
@@ -111,7 +118,9 @@ onMounted(() => {
           ]"
           :style="`transition-delay: ${(i + 4) * 100}ms`"
         >
-          <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{{ value.icon }}</div>
+          <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+            <component :is="value.icon" class="inline w-8 h-8 align-middle" />
+          </div>
           <h4 class="font-semibold text-white text-sm mb-2">{{ value.label }}</h4>
           <p class="text-xs text-white/50 leading-relaxed">{{ value.desc }}</p>
         </div>

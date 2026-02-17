@@ -87,7 +87,9 @@ onMounted(() => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12',
           ]"
         >
-          <span class="section-tag mb-4">About Us</span>
+         <div class="flex justify-center items-center">
+           <span class="section-tag mb-4">About Us</span>
+         </div>
           <h2 class="section-title mb-2">
             Nigeria's Premier
             <span class="text-forest-700"> Engineering Partner</span>

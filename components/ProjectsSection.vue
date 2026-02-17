@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import IconConstruction from '@/components/icons/IconConstruction.vue'
+import IconCalendar from '@/components/icons/IconCalendar.vue'
+import IconClock from '@/components/icons/IconClock.vue'
+import IconHandshake from '@/components/icons/IconHandshake.vue'
+
 const sectionRef = ref<HTMLElement>()
 const isVisible = ref(false)
 const activeProject = ref(0)
@@ -48,6 +53,13 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80',
     tags: ['Warehouse', 'Structural Steel', 'Civil Works', 'Turnkey'],
   },
+]
+
+const stats = [
+  { number: '50+', label: 'Projects Completed', icon: IconConstruction },
+  { number: '30+', label: 'Years Experience', icon: IconCalendar },
+  { number: '99%', label: 'On-Time Delivery', icon: IconClock },
+  { number: '20+', label: 'Satisfied Clients', icon: IconHandshake },
 ]
 
 onMounted(() => {
@@ -207,20 +219,33 @@ onMounted(() => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
         ]"
       >
-        <div
+      <div
+  v-for="stat in stats"
+  :key="stat.label"
+  class="text-center rounded-2xl bg-forest-50 border border-forest-100 p-6 hover:bg-forest-700 hover:border-forest-700 group transition-all duration-300"
+>
+  <div class="text-2xl mb-2">
+    <component :is="stat.icon" class="inline w-7 h-7 align-middle" />
+  </div>
+  <div class="font-display text-3xl font-bold text-forest-700 group-hover:text-white transition-colors duration-300">{{ stat.number }}</div>
+  <div class="text-xs text-slate-500 group-hover:text-white/70 transition-colors duration-300 mt-1">{{ stat.label }}</div>
+</div>
+        <!-- <div
           v-for="stat in [
-            { number: '50+', label: 'Projects Completed', icon: '🏗️' },
-            { number: '30+', label: 'Years Experience', icon: '📅' },
-            { number: '99%', label: 'On-Time Delivery', icon: '⏱️' },
-            { number: '20+', label: 'Satisfied Clients', icon: '🤝' },
+            { number: '50+', label: 'Projects Completed', icon: require('@/components/icons/IconConstruction.vue').default },
+            { number: '30+', label: 'Years Experience', icon: require('@/components/icons/IconCalendar.vue').default },
+            { number: '99%', label: 'On-Time Delivery', icon: require('@/components/icons/IconClock.vue').default },
+            { number: '20+', label: 'Satisfied Clients', icon: require('@/components/icons/IconHandshake.vue').default },
           ]"
           :key="stat.label"
           class="text-center rounded-2xl bg-forest-50 border border-forest-100 p-6 hover:bg-forest-700 hover:border-forest-700 group transition-all duration-300"
         >
-          <div class="text-2xl mb-2">{{ stat.icon }}</div>
+          <div class="text-2xl mb-2">
+            <component :is="stat.icon" class="inline w-7 h-7 align-middle" />
+          </div>
           <div class="font-display text-3xl font-bold text-forest-700 group-hover:text-white transition-colors duration-300">{{ stat.number }}</div>
           <div class="text-xs text-slate-500 group-hover:text-white/70 transition-colors duration-300 mt-1">{{ stat.label }}</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

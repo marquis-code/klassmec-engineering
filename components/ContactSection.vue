@@ -47,25 +47,30 @@ ${form.message}
   isSubmitted.value = true
 }
 
+import IconLocation from '@/components/icons/IconLocation.vue'
+import IconEmail from '@/components/icons/IconEmail.vue'
+import IconPhone from '@/components/icons/IconPhone.vue'
+import IconGlobe from '@/components/icons/IconGlobe.vue'
+
 const contactInfo = [
   {
-    icon: '📍',
+    icon: IconLocation,
     label: 'Office Address',
     value: '7 Oke-Anu Crescent, Km 32 off Lagos-Badagry Expressway, Morogbo, Lagos',
   },
   {
-    icon: '📧',
+    icon: IconEmail,
     label: 'Email',
     value: 'info@klassmec.com\nklassmectechserv@gmail.com',
     link: 'mailto:info@klassmec.com',
   },
   {
-    icon: '📞',
+    icon: IconPhone,
     label: 'Phone',
     value: '+234 (0) 803 721 9893\n+234 (0) 802 563 8422\n+234 (0) 803 334 2262',
   },
   {
-    icon: '🌐',
+    icon: IconGlobe,
     label: 'Website',
     value: 'www.klassmec.com',
     link: 'https://www.klassmec.com',
@@ -229,7 +234,7 @@ onMounted(() => {
                 class="flex items-start gap-4"
               >
                 <div class="flex-shrink-0 h-10 w-10 rounded-xl bg-white/10 flex items-center justify-center text-lg">
-                  {{ info.icon }}
+                  <component :is="info.icon" class="inline w-6 h-6 align-middle" />
                 </div>
                 <div>
                   <p class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-1">{{ info.label }}</p>

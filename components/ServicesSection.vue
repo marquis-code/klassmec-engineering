@@ -3,10 +3,15 @@ const sectionRef = ref<HTMLElement>()
 const isVisible = ref(false)
 const activeTab = ref(0)
 
+import IconGear from '@/components/icons/IconCheck.vue'
+import IconBolt from '@/components/icons/IconSuccess.vue'
+import IconCrane from '@/components/icons/IconConstruction.vue'
+import IconTractor from '@/components/icons/IconTimer.vue'
+
 const services = [
   {
     id: 0,
-    icon: '⚙️',
+    icon: IconGear,
     title: 'Mechanical Engineering',
     color: 'from-forest-700 to-forest-600',
     image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=800&q=80',
@@ -23,7 +28,7 @@ const services = [
   },
   {
     id: 1,
-    icon: '🔩',
+    icon: IconBolt,
     title: 'Structural Steel Fabrication',
     color: 'from-gold-600 to-gold-500',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
@@ -41,35 +46,33 @@ const services = [
   },
   {
     id: 2,
-    icon: '🏗️',
-    title: 'Civil Engineering',
-    color: 'from-forest-700 to-gold-600',
+    icon: IconCrane,
+    title: 'Civil Construction',
+    color: 'from-forest-900 to-forest-700',
     image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80',
-    tagline: 'From ground up. Done right.',
+    tagline: 'Strong foundations. Enduring value.',
     items: [
-      'Foundations & Piling Works',
-      'Construction of Roads, Drainages & Culverts',
-      'Factory Flooring & External Concrete Flooring & Paving',
-      'Residential, Commercial & Industrial Building Projects',
-      'Security Gates & Fencing',
-      'Turnkey Construction Projects: Warehouse & Factory Construction',
-      'Full-scope Civil, Structural & Architectural Works',
+      'Turnkey Construction Projects',
+      'Factory & Warehouse Construction',
+      'Roads, Drainage & Infrastructure',
+      'Concrete Works & Foundations',
+      'Renovation & Expansion Projects',
+      'Site Preparation & Earthworks',
     ],
   },
   {
     id: 3,
-    icon: '🚜',
-    title: 'Machinery & Equipment Leasing',
-    color: 'from-gold-600 to-forest-600',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
-    tagline: 'The right equipment, right when you need it.',
+    icon: IconTractor,
+    title: 'Equipment Leasing',
+    color: 'from-gold-800 to-gold-600',
+    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80',
+    tagline: 'Modern fleet. Reliable support.',
     items: [
-      'Mobile Generators for construction & industrial sites',
-      'Air Compressors for varied industrial applications',
-      'Concrete Mixers for on-site use',
-      'Flexible short & long-term leasing arrangements',
-      'Operator-included packages available',
-      'Prompt delivery and on-site support',
+      'Heavy Equipment Leasing',
+      'Cranes, Excavators, Loaders, etc.',
+      'On-site Support & Maintenance',
+      'Flexible Rental Terms',
+      'Operator Training & Certification',
     ],
   },
 ]
@@ -108,27 +111,31 @@ onMounted(() => {
       </div>
 
       <!-- Tab Selector -->
-      <div
-        :class="[
-          'flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 delay-200',
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
-        ]"
-      >
-        <button
-          v-for="service in services"
-          :key="service.id"
-          @click="activeTab = service.id"
-          :class="[
-            'flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300',
-            activeTab === service.id
-              ? 'bg-forest-700 text-white shadow-lg shadow-forest-700/30'
-              : 'bg-white text-slate-600 hover:bg-forest-50 hover:text-forest-700 border border-slate-200',
-          ]"
-        >
-          <span>{{ service.icon }}</span>
-          <span class="hidden sm:inline">{{ service.title }}</span>
-        </button>
-      </div>
+    <div
+  :class="[
+    'flex w-full mb-12 transition-all duration-700 delay-200 border border-slate-200 rounded-2xl overflow-hidden',
+    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+  ]"
+>
+  <button
+    v-for="service in services"
+    :key="service.id"
+    @click="activeTab = service.id"
+    :class="[
+      'flex flex-1 items-center justify-center gap-3 px-5 py-4 text-sm font-semibold transition-all duration-300',
+      activeTab === service.id
+        ? 'bg-forest-700 text-white shadow-lg shadow-forest-700/30'
+        : 'bg-white text-slate-600 hover:bg-forest-50 hover:text-forest-700',
+      'border-r border-slate-200 last:border-r-0',
+    ]"
+  >
+    <component
+      :is="service.icon"
+      class="w-5 h-5 shrink-0"
+    />
+    <span class="hidden sm:inline">{{ service.title }}</span>
+  </button>
+</div>
 
       <!-- Active Service Panel -->
       <div
@@ -160,7 +167,8 @@ onMounted(() => {
         <div class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
           <div class="flex items-center gap-3 mb-6">
             <div :class="`h-12 w-12 rounded-xl bg-gradient-to-br ${services[activeTab].color} flex items-center justify-center text-2xl`">
-              {{ services[activeTab].icon }}
+              <!-- {{ services[activeTab].icon }} -->
+                 <component :is="services[activeTab].icon" class="inline w-7 h-7 align-middle" />
             </div>
             <div>
               <h3 class="font-display text-xl font-bold text-slate-900">{{ services[activeTab].title }}</h3>

@@ -27,6 +27,25 @@ interface _GlobalComponents {
   ServicesSection: typeof import("../../components/ServicesSection.vue")['default']
   TeamSection: typeof import("../../components/TeamSection.vue")['default']
   VisionSection: typeof import("../../components/VisionSection.vue")['default']
+  IconsIconBlueprint: typeof import("../../components/icons/IconBlueprint.vue")['default']
+  IconsIconBlueprint2: typeof import("../../components/icons/IconBlueprint2.vue")['default']
+  IconsIconCalendar: typeof import("../../components/icons/IconCalendar.vue")['default']
+  IconsIconCheck: typeof import("../../components/icons/IconCheck.vue")['default']
+  IconsIconClients: typeof import("../../components/icons/IconClients.vue")['default']
+  IconsIconClock: typeof import("../../components/icons/IconClock.vue")['default']
+  IconsIconConstruction: typeof import("../../components/icons/IconConstruction.vue")['default']
+  IconsIconEmail: typeof import("../../components/icons/IconEmail.vue")['default']
+  IconsIconExperience: typeof import("../../components/icons/IconExperience.vue")['default']
+  IconsIconGlobe: typeof import("../../components/icons/IconGlobe.vue")['default']
+  IconsIconHandshake: typeof import("../../components/icons/IconHandshake.vue")['default']
+  IconsIconInfo: typeof import("../../components/icons/IconInfo.vue")['default']
+  IconsIconLocation: typeof import("../../components/icons/IconLocation.vue")['default']
+  IconsIconOnTime: typeof import("../../components/icons/IconOnTime.vue")['default']
+  IconsIconPhone: typeof import("../../components/icons/IconPhone.vue")['default']
+  IconsIconProject: typeof import("../../components/icons/IconProject.vue")['default']
+  IconsIconSuccess: typeof import("../../components/icons/IconSuccess.vue")['default']
+  IconsIconTimer: typeof import("../../components/icons/IconTimer.vue")['default']
+  IconsIconUser: typeof import("../../components/icons/IconUser.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
   NuxtErrorBoundary: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -86,6 +105,25 @@ interface _GlobalComponents {
   LazyServicesSection: LazyComponent<typeof import("../../components/ServicesSection.vue")['default']>
   LazyTeamSection: LazyComponent<typeof import("../../components/TeamSection.vue")['default']>
   LazyVisionSection: LazyComponent<typeof import("../../components/VisionSection.vue")['default']>
+  LazyIconsIconBlueprint: LazyComponent<typeof import("../../components/icons/IconBlueprint.vue")['default']>
+  LazyIconsIconBlueprint2: LazyComponent<typeof import("../../components/icons/IconBlueprint2.vue")['default']>
+  LazyIconsIconCalendar: LazyComponent<typeof import("../../components/icons/IconCalendar.vue")['default']>
+  LazyIconsIconCheck: LazyComponent<typeof import("../../components/icons/IconCheck.vue")['default']>
+  LazyIconsIconClients: LazyComponent<typeof import("../../components/icons/IconClients.vue")['default']>
+  LazyIconsIconClock: LazyComponent<typeof import("../../components/icons/IconClock.vue")['default']>
+  LazyIconsIconConstruction: LazyComponent<typeof import("../../components/icons/IconConstruction.vue")['default']>
+  LazyIconsIconEmail: LazyComponent<typeof import("../../components/icons/IconEmail.vue")['default']>
+  LazyIconsIconExperience: LazyComponent<typeof import("../../components/icons/IconExperience.vue")['default']>
+  LazyIconsIconGlobe: LazyComponent<typeof import("../../components/icons/IconGlobe.vue")['default']>
+  LazyIconsIconHandshake: LazyComponent<typeof import("../../components/icons/IconHandshake.vue")['default']>
+  LazyIconsIconInfo: LazyComponent<typeof import("../../components/icons/IconInfo.vue")['default']>
+  LazyIconsIconLocation: LazyComponent<typeof import("../../components/icons/IconLocation.vue")['default']>
+  LazyIconsIconOnTime: LazyComponent<typeof import("../../components/icons/IconOnTime.vue")['default']>
+  LazyIconsIconPhone: LazyComponent<typeof import("../../components/icons/IconPhone.vue")['default']>
+  LazyIconsIconProject: LazyComponent<typeof import("../../components/icons/IconProject.vue")['default']>
+  LazyIconsIconSuccess: LazyComponent<typeof import("../../components/icons/IconSuccess.vue")['default']>
+  LazyIconsIconTimer: LazyComponent<typeof import("../../components/icons/IconTimer.vue")['default']>
+  LazyIconsIconUser: LazyComponent<typeof import("../../components/icons/IconUser.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
   LazyNuxtErrorBoundary: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

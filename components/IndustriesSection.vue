@@ -8,46 +8,53 @@ import packaging from '@/assets/img/industries/packaging.jpg'
 import construction from '@/assets/img/industries/construction.jpg'
 import nonProfit from '@/assets/img/industries/nonProfit.jpg'
 import steel from '@/assets/img/industries/steel.jpg'
+import IconFactory from '@/components/icons/IconConstruction.vue'
+import IconGas from '@/components/icons/IconClock.vue'
+import IconFood from '@/components/icons/IconBlueprint.vue'
+import IconBox from '@/components/icons/IconBlueprint2.vue'
+import IconBuilding from '@/components/icons/IconCalendar.vue'
+import IconTruck from '@/components/icons/IconTimer.vue'
+import IconGlobe from '@/components/icons/IconGlobe.vue'
 
 const industries = [
   {
-    icon: '🏭',
+    icon: IconFactory,
     title: 'Manufacturing',
     desc: 'Plant maintenance, fabrication, and turnkey factory projects for manufacturers across Nigeria.',
     image: manufacturing,
   },
   {
-    icon: '⛽',
+    icon: IconGas,
     title: 'Oil & Gas',
     desc: 'Storage tank fabrication, piping, and structural works for upstream and downstream operations.',
     image: oilandgas,
   },
   {
-    icon: '🍫',
+    icon: IconFood,
     title: 'Food & Beverage',
     desc: 'Hygienic mechanical systems and facility construction for food and beverage producers.',
     image: food,
   },
   {
-    icon: '📦',
+    icon: IconBox,
     title: 'Packaging',
     desc: 'Machine installation, plant upgrades, and structural works for packaging facilities.',
     image: packaging,
   },
   {
-    icon: '🏢',
+    icon: IconBuilding,
     title: 'Real Estate & Construction',
     desc: 'Full-scope civil, structural, and architectural works for residential and commercial projects.',
     image: construction,
   },
   {
-    icon: '🚛',
+    icon: IconTruck,
     title: 'Logistics & Warehousing',
     desc: 'Warehouse construction, loading bays, and storage infrastructure for logistics companies.',
     image: steel,
   },
   {
-    icon: '🌐',
+    icon: IconGlobe,
     title: 'Nonprofit & Development',
     desc: 'Infrastructure solutions for NGOs and public health initiatives across West Africa.',
     image: nonProfit,
@@ -105,7 +112,7 @@ onMounted(() => {
             />
             <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
             <div class="absolute top-4 right-4 h-10 w-10 rounded-xl bg-white shadow-md flex items-center justify-center text-xl">
-              {{ industry.icon }}
+              <component :is="industry.icon" class="inline w-7 h-7 align-middle" />
             </div>
           </div>
 

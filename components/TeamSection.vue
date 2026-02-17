@@ -4,6 +4,12 @@ const isVisible = ref(false)
 import founder from "@/assets/img/founder1.jpg"
 import ceo from "@/assets/img/ceo.jpg"
 import businessDirector from "@/assets/img/business-director.jpeg"
+import IconTrophy from '@/components/icons/IconCheck.vue'
+import IconWorker from '@/components/icons/IconUser.vue'
+import IconFactory from '@/components/icons/IconConstruction.vue'
+import IconClipboard from '@/components/icons/IconBlueprint.vue'
+import IconTimer from '@/components/icons/IconClock.vue'
+import IconRefresh from '@/components/icons/IconSuccess.vue'
 
 const team = [
   {
@@ -31,32 +37,32 @@ const team = [
 
 const advantages = [
   {
-    icon: '🏆',
+    icon: IconTrophy,
     title: 'Proven Industry Experience',
     desc: 'Over two decades of successfully navigating the Nigerian engineering terrain gives us an unmatched advantage in project planning and execution.',
   },
   {
-    icon: '👷',
+    icon: IconWorker,
     title: 'Highly Skilled Professionals',
     desc: 'Our team of certified engineers, project managers, and technicians undergo continuous training to stay at the cutting edge of industry best practices.',
   },
   {
-    icon: '🏭',
+    icon: IconFactory,
     title: 'State-of-the-Art Facilities',
     desc: 'Our well-equipped fabrication yard features modern machinery, allowing us to deliver precision and quality while controlling timelines.',
   },
   {
-    icon: '📋',
+    icon: IconClipboard,
     title: 'Commitment to Standards',
     desc: 'We operate in strict compliance with Nigerian (COREN, SON) and international engineering standards (API, ASME, AWS), ensuring reliability and safety.',
   },
   {
-    icon: '⏱️',
+    icon: IconTimer,
     title: 'Efficient Project Management',
     desc: 'Our agile and lean project execution methodology minimizes waste, reduces costs, and ensures on-time project delivery.',
   },
   {
-    icon: '🔄',
+    icon: IconRefresh,
     title: 'End-to-End Solutions',
     desc: 'From design to maintenance, our ability to handle all aspects of a project provides clients with a seamless, hassle-free experience.',
   },
@@ -159,7 +165,9 @@ onMounted(() => {
               ]"
               :style="`transition-delay: ${(i + 6) * 100}ms`"
             >
-              <div class="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{{ adv.icon }}</div>
+              <div class="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <component :is="adv.icon" class="inline w-8 h-8 align-middle" />
+              </div>
               <h4 class="font-semibold text-white text-sm mb-2">{{ adv.title }}</h4>
               <p class="text-xs text-white/60 leading-relaxed">{{ adv.desc }}</p>
             </div>

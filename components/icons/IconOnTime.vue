@@ -1,0 +1,10 @@
+<template>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M12 8v4l3 3"/>
+  </svg>
+</template>
+
+<script setup lang="ts">
+// On-Time/Timer Icon (variant)
+</script>
