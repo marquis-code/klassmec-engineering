@@ -65,7 +65,7 @@ onMounted(() => {
             />
           </div>
           <!-- Floating badge -->
-          <div class="absolute bottom-12 right-0 z-30 bg-white rounded-2xl p-4 shadow-xl border border-forest-100">
+          <!-- <div class="absolute bottom-12 right-0 z-30 bg-white rounded-2xl p-4 shadow-xl border border-forest-100">
             <div class="flex items-center gap-3">
               <div class="h-12 w-12 rounded-xl bg-forest-700 flex items-center justify-center text-white font-display text-lg font-bold">
                 30+
@@ -75,7 +75,7 @@ onMounted(() => {
                 <p class="text-sm font-bold text-forest-800">Excellence</p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Green accent bar -->
           <div class="absolute top-1/2 -left-4 h-24 w-2 rounded-full bg-gradient-to-b from-forest-700 to-gold-500 -translate-y-1/2"></div>
         </div>
@@ -120,26 +120,6 @@ onMounted(() => {
           </div>
 
           <!-- Timeline -->
-          <div class="space-y-3">
-            <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-4">Our Journey</h3>
-            <div
-              v-for="(milestone, i) in milestones"
-              :key="i"
-              :class="[
-                'flex items-center gap-4 group transition-all duration-300 delay-75',
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
-              ]"
-              :style="`transition-delay: ${(i + 3) * 100}ms`"
-            >
-              <div class="flex-shrink-0 h-10 w-16 rounded-lg bg-forest-700 flex items-center justify-center text-gold-400 text-xs font-bold">
-                {{ milestone.year }}
-              </div>
-              <div class="flex items-center gap-2 flex-1 rounded-lg bg-slate-50 px-3 py-2 border border-transparent group-hover:border-forest-200 group-hover:bg-forest-50 transition-all duration-200">
-                <span>{{ milestone.icon }}</span>
-                <span class="text-sm text-slate-700">{{ milestone.event }}</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

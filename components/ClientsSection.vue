@@ -125,7 +125,7 @@ onMounted(() => {
       </div>
 
       <!-- Testimonials -->
-      <div
+      <!-- <div
         :class="[
           'transition-all duration-700 delay-700',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
@@ -171,7 +171,7 @@ onMounted(() => {
             />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

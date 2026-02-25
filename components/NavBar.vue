@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Clients', href: '#clients' },
-  { label: 'Projects', href: '#projects' },
+  // { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -78,7 +78,7 @@ const scrollTo = (href: string) => {
         <!-- CTA Button -->
         <div class="hidden lg:flex items-center gap-3">
           <a href="#contact" @click.prevent="scrollTo('#contact')" class="btn-gold text-xs px-4 py-2">
-            Get a Quote
+            Request A Consultation
             <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -132,7 +132,7 @@ const scrollTo = (href: string) => {
               @click.prevent="scrollTo('#contact')"
               class="btn-primary w-full justify-center text-xs"
             >
-              Get a Quote
+              Request A Consultation
             </a>
           </div>
         </div>

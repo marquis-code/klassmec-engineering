@@ -47,7 +47,7 @@ const services = [
   {
     id: 2,
     icon: IconCrane,
-    title: 'Civil Construction',
+    title: 'Civil / Construction',
     color: 'from-forest-900 to-forest-700',
     image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80',
     tagline: 'Strong foundations. Enduring value.',
@@ -72,10 +72,14 @@ const services = [
       'Cranes, Excavators, Loaders, etc.',
       'On-site Support & Maintenance',
       'Flexible Rental Terms',
-      'Operator Training & Certification',
+      // 'Operator Training & Certification',
     ],
   },
 ]
+
+const scrollToContact = () => {
+  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -192,8 +196,9 @@ onMounted(() => {
           </ul>
 
           <div class="mt-6 pt-6 border-t border-slate-100">
-            <a href="#contact" @click.prevent="() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })" class="btn-primary w-full justify-center">
-              Request This Service
+            <a href="#contact" @click.prevent="scrollToContact" class="btn-primary w-full justify-center">
+              {{ services[activeTab].title !== 'Equipment Leasing' ? 'Request A Consultation' : 'Contact Us'  }}
+              <!-- Request A Consultation -->
               <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

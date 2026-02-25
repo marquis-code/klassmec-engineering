@@ -13,11 +13,11 @@ const isSubmitted = ref(false)
 const isSubmitting = ref(false)
 
 const services = [
-  'Mechanical Engineering',
-  'Structural Steel Fabrication',
-  'Civil Engineering',
-  'Machinery & Equipment Leasing',
-  'General Consultation',
+  'Request A Consultation',
+  'Rent Equipments',
+  // 'Civil Engineering',
+  // 'Machinery & Equipment Leasing',
+  // 'General Consultation',
 ]
 
 const handleSubmit = async () => {
@@ -67,7 +67,7 @@ const contactInfo = [
   {
     icon: IconPhone,
     label: 'Phone',
-    value: '+234 (0) 803 721 9893\n+234 (0) 802 563 8422\n+234 (0) 803 334 2262',
+    value: '+234 814 167 9077\n+234 802 563 8422\n+234 803 721 9893',
   },
   {
     icon: IconGlobe,
@@ -193,7 +193,7 @@ onMounted(() => {
                     Sending...
                   </span>
                   <span v-else>Send Message</span>
-                  <svg v-if="!isSubmitting" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg v-if="!isSubmitting" class="h-4 w-4 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                   </svg>
                 </button>
@@ -264,10 +264,10 @@ onMounted(() => {
             </div>
             <p class="text-xs text-slate-500 italic mb-4">"Connoisseurs of Engineering Excellence"</p>
             <div class="flex gap-3">
-              <a href="mailto:info@klassmec.com" class="btn-primary text-xs px-4 py-2 flex-1 justify-center">
+              <a href="mailto:klassmectechserv@gmail.com" class="btn-primary text-xs px-4 py-2 flex-1 justify-center">
                 Email Us
               </a>
-              <a href="tel:+2348037219893" class="btn-secondary text-xs px-4 py-2 flex-1 justify-center">
+              <a href="tel:+2348141679077" class="btn-secondary text-xs px-4 py-2 flex-1 justify-center">
                 Call Now
               </a>
             </div>

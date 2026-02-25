@@ -23,13 +23,13 @@ useHead({
       <HeroSection />
       <GallerySection />
       <AboutSection />
+      <TeamSection />
       <VisionSection />
       <ServicesSection />
       <IndustriesSection />
       <ClientsSection />
-      <ProjectsSection />
-      <TeamSection />
-      <ContactSection />
+      <!-- <ProjectsSection /> -->
+      <ContactSection id="contact" />
     </main>
 
     <!-- Footer -->

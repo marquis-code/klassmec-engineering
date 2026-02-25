@@ -32,7 +32,7 @@ import IconCheck from '@/components/icons/IconCheck.vue'
 const stats = [
   { value: '30+', label: 'Years of Experience', icon: IconConstruction },
   { value: '50+', label: 'Major Projects', icon: IconBlueprint },
-  { value: '20+', label: 'Multinational Clients', icon: IconClients },
+  { value: '6+', label: 'Multinational Clients', icon: IconClients },
   { value: '100%', label: 'Commitment to Quality', icon: IconCheck },
 ]
 
@@ -54,6 +54,10 @@ const goToSlide = (index: number) => {
 
 const scrollToAbout = () => {
   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+}
+
+const scrollToServices = () => {
+  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
@@ -116,15 +120,15 @@ const scrollToAbout = () => {
 
         <!-- CTAs -->
         <div class="flex flex-wrap gap-4 mb-12">
-          <a href="#services" @click.prevent="() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })" class="btn-gold">
+          <a href="#services" @click.prevent="scrollToServices" class="btn-gold">
             Explore Services
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a href="#contact" @click.prevent="() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })" class="btn-secondary border-white text-white hover:bg-white hover:text-forest-800">
+          <!-- <a href="#contact" @click.prevent="() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })" class="btn-secondary border-white text-white hover:bg-white hover:text-forest-800">
             Get a Free Quote
-          </a>
+          </a> -->
         </div>
       </div>
 

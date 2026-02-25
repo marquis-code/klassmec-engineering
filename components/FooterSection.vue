@@ -30,7 +30,7 @@ const scrollTo = (id: string) => {
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-widest text-white/40 mb-5">Quick Links</h4>
           <ul class="space-y-3">
-            <li v-for="link in ['home', 'about', 'services', 'industries', 'clients', 'projects', 'contact']" :key="link">
+            <li v-for="link in ['home', 'about', 'services', 'industries', 'clients', 'contact']" :key="link">
               <button
                 @click="scrollTo(link)"
                 class="text-sm text-white/60 hover:text-gold-400 transition-colors duration-200 capitalize flex items-center gap-2"
@@ -54,11 +54,11 @@ const scrollTo = (id: string) => {
             </li>
             <li class="flex gap-3">
               <span class="text-gold-500 flex-shrink-0">📧</span>
-              <a href="mailto:info@klassmec.com" class="text-sm text-white/60 hover:text-gold-400 transition-colors">info@klassmec.com</a>
+              <a href="mailto:klassmectechserv@gmail.com" class="text-sm text-white/60 hover:text-gold-400 transition-colors">klassmectechserv@gmail.com</a>
             </li>
             <li class="flex gap-3">
               <span class="text-gold-500 flex-shrink-0">📞</span>
-              <a href="tel:+2348037219893" class="text-sm text-white/60 hover:text-gold-400 transition-colors">+234 (0) 803 721 9893</a>
+              <a href="tel:+2348141679077" class="text-sm text-white/60 hover:text-gold-400 transition-colors">+234 814 167 9077</a>
             </li>
           </ul>
         </div>
