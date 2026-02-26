@@ -35,7 +35,7 @@ const team = [
   },
     {
     name: 'Akeem Yusuf',
-    role: 'Business Director',
+    role: 'Technical Director',
     image: '',
     bio: 'Overseeing business development and client relations, ensuring Klassmec continues to build lasting partnerships with leading organizations.',
     color: 'from-forest-700 to-gold-600',
